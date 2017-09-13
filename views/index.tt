@@ -1,0 +1,69 @@
+<div id="page">
+	<div id="content">
+		<div id="header">
+			<h1>
+				<a href="/">Snippy notebook</a>
+			</h1>
+			<form action="<% request.uri_base %>" id="search">
+				Search:
+				<input type="text" name="query" value="<% query %>" />
+			</form>
+		</div>
+		<form action="<% request.uri_base %>/<% IF results.size == 1 and id.defined %><% results.0.id %><% END %>" method="POST">
+			<textarea name="note" style="width: 100%; height: 10em">
+            <%- IF results.size == 1 and id.defined %><% results.0.note %><% END -%></textarea>
+			<br />
+			Source: <input type="text" name="source" style="width: 88%"
+                <% IF results.size == 1 and id.defined %>
+                    value="<% results.0.source %>"
+                <% END %>
+			/> <br />
+			<input type="submit" value="Save" style="width: 49%" />
+			<input type="button" value="Cancel" style="width: 49%"
+			    onclick="location.assign('<% request.uri_base %>')" />
+		</form>
+        <% IF results.size and not id.defined %>
+    		<table style="width: 100%" class="notes">
+                <% FOREACH result IN results %>
+                    <tbody class="note">
+                        <tr>
+                            <th rowspan="3">
+                                <% IF result.id != id %>
+                                    <form method="get"
+                                        action="<% request.uri_base %>/<% result.id %>">
+                                        <input type="submit" value="Edit" />
+                                    </form>
+                                <% END %>
+                                <form method="post"
+                                    action="<% request.uri_base %>/<% result.id %>">
+                                    <input type="hidden" name="delete"
+                                        value="<% result.id %>" />
+                                    <input type="submit" value="Delete" />
+                                </form>
+                            </th>
+                            <td colspan="4" class="note">
+                                <% result.note %>
+                            </td>
+                        </tr>
+                        <tr class="meta">
+                            <th>Source</th>
+                            <td colspan="3" class="source">
+                                <% result.source %>
+                            </td>
+                        </tr>
+                        <tr class="meta timestamp">
+                            <th>Created</th>
+                            <td>
+                                <% result.created %>
+                            </td>
+                            <th>Updated</th>
+                            <td>
+                                <% result.updated %>
+                            </td>
+                        </tr>
+                    </tbody>
+                <% END %>
+            </table>
+        <% END %>
+	</div>
+</div>
