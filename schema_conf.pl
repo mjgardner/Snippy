@@ -1,3 +1,5 @@
+use utf8;
+
 {   schema_class   => 'WebApp::Snippy::Schema',
     lib            => './lib',
     connect_info   => { dsn => 'dbi:SQLite:./snippy.db' },
@@ -9,11 +11,11 @@
             my ( $table, $column_name, $column_info ) = @_;
 
             for ($column_name) {
-                $_ eq 'created' and return {
+                'created' eq $_ and return {
                     data_type     => 'datetime',
                     set_on_create => 1,
                 };
-                $_ eq 'updated' and return {
+                'updated' eq $_ and return {
                     data_type     => 'datetime',
                     set_on_create => 1,
                     set_on_update => 1,

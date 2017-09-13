@@ -8,21 +8,20 @@ allowed_pragmata = diagnostics feature perlversion strict warnings utf8
 [CodeLayout::RequireTidyCode]
 perltidyrc = xt/author/perltidy.rc
 
-# since we're using Modern::Perl
 [Compatibility::PerlMinimumVersionAndWhy]
-above_version = 5.010
+above_version = 5.012
 [Compatibility::PodMinimumVersion]
-above_version = 5.010
+above_version = 5.012
 
 [Documentation::PodSpelling]
-stop_words = Perldoc perldoc annonations PASSed dists executables metadata plugin
+stop_words = Perldoc perldoc ACCESSORS psgi
 
 [Documentation::RequirePodSections]
 lib_sections    = NAME | VERSION | DESCRIPTION | SYNOPSIS | COPYRIGHT AND LICENSE
 script_sections = NAME | USAGE | OPTIONS | EXIT STATUS | COPYRIGHT AND LICENSE
 
 [Subroutines::ProhibitCallsToUndeclaredSubs]
-exempt_subs =
+exempt_subs = Dancer2::get Dancer2::post Dancer2::redirect Dancer2::template Dancer2::Plugin::DBIC::resultset
 
 [TestingAndDebugging::RequireUseStrict]
 equivalent_modules = Modern::Perl
@@ -33,3 +32,6 @@ equivalent_modules = Modern::Perl
 [InputOutput::RequireCheckedSyscalls]
 functions = :builtins
 exclude_functions = print say
+
+[ControlStructures::ProhibitPostfixControls]
+flowcontrol = warn die carp croak cluck confess goto exit redirect

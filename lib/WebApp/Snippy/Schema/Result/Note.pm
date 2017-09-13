@@ -98,10 +98,10 @@ __PACKAGE__->add_columns(
 
 __PACKAGE__->set_primary_key("id");
 
-
 # Created by DBIx::Class::Schema::Loader v0.07047 @ 2017-09-13 12:24:16
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:MtVk2UudlmIATWg6GLG+ew
 
-
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
+# VERSION
+
 1;
