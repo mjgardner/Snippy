@@ -1,6 +1,6 @@
 # NAME
 
-app.psgi - minimalist note-taking web application
+snippy.psgi - minimalist note-taking web application
 
 # VERSION
 
@@ -8,7 +8,7 @@ version 0.001
 
 # USAGE
 
-    plackup -r bin/app.psgi
+    plackup -r bin/snippy.psgi
 
 # SUPPORT
 
@@ -16,7 +16,7 @@ version 0.001
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc bin::app.psgi
+    perldoc bin::snippy.psgi
 
 ## Websites
 
@@ -63,7 +63,7 @@ in addition to those websites please use your favorite search engine to discover
 
     The CPAN Testers Dependencies is a website that shows a chart of the test results of all dependencies for a distribution.
 
-    [http://deps.cpantesters.org/?module=bin::app.psgi](http://deps.cpantesters.org/?module=bin::app.psgi)
+    [http://deps.cpantesters.org/?module=bin::snippy.psgi](http://deps.cpantesters.org/?module=bin::snippy.psgi)
 
 ## Bugs / Feature Requests
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # ABSTRACT: minimalist note-taking web application
-# PODNAME: app.psgi
+# PODNAME: snippy.psgi
 
 use strict;
 use warnings;
@@ -15,7 +15,7 @@ use WebApp::Snippy;
 
 =head1 USAGE
 
-    plackup -r bin/app.psgi
+    plackup -r bin/snippy.psgi
 
 =cut
 
