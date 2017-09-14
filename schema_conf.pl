@@ -1,4 +1,11 @@
+package main;
+
+## no critic (Lax::RequireEndWithTrueConst, Modules::RequireEndWithOne)
+
+use strict;
+use warnings;
 use utf8;
+our $VERSION = '0.001';
 
 {   schema_class   => 'WebApp::Snippy::Schema',
     lib            => './lib',
@@ -7,6 +14,7 @@ use utf8;
         dump_directory        => './lib',
         filter_generated_code => 'perltidy --profile=xt/author/perltidy.rc',
         components            => [qw(InflateColumn::DateTime TimeStamp)],
+        generate_pod          => 0,
         custom_column_info    => sub {
             my ( $table, $column_name, $column_info ) = @_;
 

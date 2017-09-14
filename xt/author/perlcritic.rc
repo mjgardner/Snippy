@@ -1,6 +1,6 @@
 severity = brutal
 verbose = 8
-exclude = Modules::RequirePerlVersion Editor::RequireEmacsFileVariables Miscellanea::RequireRcsKeywords Modules::RequireExplicitInclusion Modules::RequireExplicitPackage Tics::ProhibitLongLines CodeLayout::ProhibitHashBarewords
+exclude = Modules::RequirePerlVersion Editor::RequireEmacsFileVariables Miscellanea::RequireRcsKeywords Modules::RequireExplicitInclusion Modules::RequireExplicitPackage Tics::ProhibitLongLines CodeLayout::ProhibitHashBarewords Tics::ProhibitUseBase ValuesAndExpressions::ProhibitInterpolationOfLiterals
 
 [Lax::RequireExplicitPackage::ExceptForPragmata]
 allowed_pragmata = diagnostics feature perlversion strict warnings utf8
@@ -14,7 +14,7 @@ above_version = 5.012
 above_version = 5.012
 
 [Documentation::PodSpelling]
-stop_words = Perldoc perldoc ACCESSORS psgi
+stop_words = Perldoc perldoc ACCESSORS psgi incrementing undef DateTime plackup
 
 [Documentation::RequirePodSections]
 lib_sections    = NAME | VERSION | DESCRIPTION | SYNOPSIS | COPYRIGHT AND LICENSE

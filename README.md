@@ -10,6 +10,14 @@ version 0.001
 
     plackup -r bin/snippy.psgi
 
+# OPTIONS
+
+None.
+
+# EXIT STATUS
+
+See [plackup](https://metacpan.org/pod/plackup) or your favorite PSGI runner.
+
 # SUPPORT
 
 ## Perldoc
