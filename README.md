@@ -24,7 +24,7 @@ See [plackup](https://metacpan.org/pod/plackup) or your favorite PSGI runner.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc bin::snippy.psgi
+    perldoc snippy.psgi
 
 ## Websites
 
@@ -57,7 +57,7 @@ in addition to those websites please use your favorite search engine to discover
 
 - CPAN Testers
 
-    The CPAN Testers is a network of smokers who run automated tests on uploaded CPAN distributions.
+    The CPAN Testers is a network of smoke testers who run automated tests on uploaded CPAN distributions.
 
     [http://www.cpantesters.org/distro/W/WebApp-Snippy](http://www.cpantesters.org/distro/W/WebApp-Snippy)
 
